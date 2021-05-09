@@ -1,8 +1,10 @@
 $(window).ready(function () {
 console.log("Dom ready to use")
 
+var newThing= null;
 var displayValue='0';
 $('.result').text(displayValue);
+$('#ani').text(newThing);
 
 $('.1').on('click', function(){
     let val = $('.result').text();
@@ -73,6 +75,15 @@ $('.add').on('click', function(){
     val = String(val);
     val = val.concat('+');
     $('.result').text(val);
+    $('#ani').animate({
+        left: '250px',
+        opacity: '100',
+        height: '150px',
+        width: '150px',
+             })
+             let trying='You did Addition';
+             $('#ani').text(trying);
+       
 })
 
 $('.sub').on('click', function(){
@@ -80,6 +91,15 @@ $('.sub').on('click', function(){
     val = String(val);
     val = val.concat('-');
     $('.result').text(val);
+    $('#ani').animate({
+        left: '250px',
+        opacity: '100',
+        height: '150px',
+        width: '150px',
+             })
+             let trying='You did Substraction';
+             $('#ani').text(trying);
+    
 })
 
 $('.div').on('click', function(){
@@ -87,18 +107,46 @@ $('.div').on('click', function(){
     val = String(val);
     val = val.concat('/');
     $('.result').text(val);
+    $('#ani').animate({
+        left: '250px',
+        opacity: '100',
+        height: '150px',
+        width: '150px',
+             })
+             let trying='You did Division';
+             $('#ani').text(trying);
+    
 })
 $('.mul').on('click', function(){
     let val = $('.result').text();
     val = String(val);
     val = val.concat('*');
     $('.result').text(val);
+   $('#ani').animate({
+    left: '250px',
+    opacity: '100',
+    height: '150px',
+    width: '150px',
+         })
+         let trying='You did Multiply';
+         $('#ani').text(trying);
+
 })
+
 $('.per').on('click', function(){
     let val = $('.result').text();
     val = String(val);
     val = val/100;
     $('.result').text(val);
+    $('#ani').animate({
+        left: '250px',
+        opacity: '100',
+        height: '150px',
+        width: '150px',
+             })
+             let trying='You did Percentage';
+             $('#ani').text(trying);
+    
 })
 
 $('.eql').on('click', function(){
@@ -106,6 +154,11 @@ $('.eql').on('click', function(){
     val = String(val);
     val = eval(val);
     $('.result').text(val);
+    $('#ani').animate({
+        left: '250px',
+        height: '150px',
+         })
+            $('#ani').text('You are doing good');
 })
 
 $('.Cl').on('click', function(){
@@ -113,6 +166,12 @@ $('.Cl').on('click', function(){
     val = String(val);
     val = null;
     $('.result').text(val);
+    $('#ani').animate({
+        opacity: '0%',
+            })
+            $('#ani').text(val);
+
+
 })
 $('.bck').on('click', function(){
     let val = $('.result').text();
@@ -120,7 +179,14 @@ $('.bck').on('click', function(){
     val = String(val);
     val = val.slice(0,-1);
     $('.result').text(val);
+    $('#ani').animate({
+        height: '100px',
+        opacity: '0%',
+            })
+            $('#ani').text(val);
+    
+})
 })
 
 
-})
+
